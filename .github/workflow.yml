@@ -1,7 +1,0 @@
-name: Omatesti
-on: [workflow_dispatch]
-jobs:
-  ekatesti:
-    runs-on: ubuntu-latest
-    steps:
-      - run: echo Hello World!!
