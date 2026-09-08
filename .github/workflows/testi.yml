@@ -2,9 +2,13 @@ name: Testi
 on: [workflow_dispatch]
 jobs:
   ekatesti:
-    runs-on: ubuntu-slim
+    runs-on: ubuntu-latest
     steps:
       - name: Checkout
         uses: actions/checkout@v7
       - name: Komento
-        run: git log --oneline
+        run: |
+          touch logi.txt
+          git log --oneline > logi.txt
+      - run: cat logi.txt
+          
