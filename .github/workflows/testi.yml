@@ -1,0 +1,11 @@
+name: Testi
+on: [workflow_dispatch]
+jobs:
+  ekatesti:
+    runs-on: ubuntu-slim
+    steps:
+      - run: |
+          apt update
+          apt install ncal
+          ncal
+        
