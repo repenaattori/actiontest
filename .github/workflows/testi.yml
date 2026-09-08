@@ -5,7 +5,7 @@ jobs:
     runs-on: ubuntu-slim
     steps:
       - run: |
-          apt update
-          apt install ncal
+          sudo apt update
+          sudo apt install -y ncal
           ncal
         
