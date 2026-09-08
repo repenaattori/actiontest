@@ -4,8 +4,7 @@ jobs:
   ekatesti:
     runs-on: ubuntu-slim
     steps:
-      - run: |
-          sudo apt update
-          sudo apt install -y ncal
-          ncal
-        
+      - name: Checkout
+        uses: actions/checkout@v7
+      - name: Komento
+        run: git log --oneline
