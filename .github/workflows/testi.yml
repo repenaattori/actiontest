@@ -1,19 +1,11 @@
 name: Testi
-on: [workflow_dispatch]
-permissions: 
-  contents: write
+on: [push]
 jobs:
   ekatesti:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout
-        uses: actions/checkout@v7
       - name: Komento
         run: |
-          touch logi.txt  
-          git config --global user.name 'repenaattori'
-          git config --global user.email 'reimarii@oamk.fi'
-          git add logi.txt
-          git commit -m 'Logi file added'
-          git push
+          echo "Commit on ${github.event.commits[0].message}"
+
           
