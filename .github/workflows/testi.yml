@@ -6,6 +6,6 @@ jobs:
     steps:
       - name: Komento
         run: |
-          echo "Commit on ${github.event.commits[0].message}"
+          echo "Commit on ${{github.event.commits[0].message}}"
 
           
