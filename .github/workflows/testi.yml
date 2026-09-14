@@ -1,7 +1,7 @@
 name: Testi
 on: [push]
 env:
-  OMA: Tervehdys
+  OMA: ${{github.event.head_commit.message}}
 jobs:
   ekatesti:
     runs-on: ubuntu-latest
